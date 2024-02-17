@@ -4,6 +4,7 @@ import { auth } from "../firebase";
 import {Link, useNavigate } from "react-router-dom";
 import { FirebaseError } from "firebase/app";
 import { Error, Input, Title, Wrapper, Switcher, Form } from "../components/auth-components";
+import GithubBtn from "../components/github-btn";
 
 export default function Login() {
   const [isLoading, setLoading] = useState(false);
@@ -74,6 +75,7 @@ export default function Login() {
         Don't have an account?
           <Link to="/create-account">Create one &rarr;</Link>
       </Switcher>
+      <GithubBtn/>
     </Wrapper>
   );
 }
